@@ -1,0 +1,30 @@
+{% extends 'portfolio/base.html'%} {% block content %} {% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="{% static 'portfolio/i.jpg' %}" width="400" height="400">
+            <h1>Davron Normurodov</h1>
+        </div>
+    </div>
+
+    <h2>Portfolio</h2>
+    <div class="row">
+
+        {% for project in projects%}
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap" width="200" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{project.description}}</p>
+                    {% if project.url %}
+                    <a href="{{project.url}}" class="btn btn-primary">Go project</a> {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

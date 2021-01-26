@@ -1,0 +1,12 @@
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: red;
+    /* background-color: rgb(61, 73, 68); */
+}
+
+.navbar-brand {
+    margin-right: 900px;
+    /* color: red; */
+    /* background-color: red; */
+}
